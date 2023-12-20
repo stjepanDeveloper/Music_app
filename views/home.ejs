@@ -1,0 +1,35 @@
+<!-- views/home.ejs -->
+<%- include('partials/header') %>
+
+<main class="container mt-3 main-container">
+  <!-- Display Top Tracks -->
+  <section class="tracks-section">
+    <h2>
+      <span class="mr-2"><i class="fas fa-compact-disc"></i> Top Tracks
+    </h2>
+    <ol>
+      <% topTracks.slice(0, 30).forEach((track, index) => { %>
+        <li>
+          <button onclick="playTrack('<%= track.url %>')">
+            <%= track.name %> by <%= track.artist.name %>
+          </button>
+        </li>
+      <% }); %>
+    </ol>
+  </section>
+
+  <!-- Display Top Artists -->
+  <section class="artists-section">
+    <h2>
+      <span class="mr-2"><i class="fas fa-microphone"></i></span> Top Artists
+    </h2>
+    <ol>
+      <% topArtists.slice(0, 30).forEach((artist, index) => { %>
+        <li><%= artist.name %></li>
+      <% }); %>
+    </ol>
+  </section>
+</main>
+<!-- Include the audio player script -->
+<%- include('partials/footer') %>
+

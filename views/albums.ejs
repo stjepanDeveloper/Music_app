@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+
+<main class="container mt-3">
+  <h1>Top Albums</h1>
+
+  <!-- Form for user input -->
+  <form action="/albums" method="get" class="mb-3">
+    <label for="artistInput" class="form-label">Enter Artist Name:</label>
+    <div class="input-group">
+      <input type="text" class="form-control" id="artistInput" name="artist" required>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+  </form>
+
+  <!-- Display Top Albums -->
+  <section>
+    <h2>Top Albums for <%= artistName %></h2>
+    <ul>
+      <% topAlbums.forEach(album => { %>
+        <li><%= album.name %> by <%= album.artist.name %></li>
+      <% }); %>
+    </ul>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

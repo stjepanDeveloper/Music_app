@@ -1,0 +1,109 @@
+body {
+    background-image: url('/images/music_app_background.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    margin:auto;
+  }
+   
+  .main-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .tracks-section,
+  .artists-section {
+    margin: 0 auto; /* Center the sections within the container */
+  }
+
+  
+/* Add styles for the animated sound waves and control board */
+  .tags-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .title-text {
+    margin-bottom: 50px;
+  }
+
+  .radio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 500px;
+  }
+
+  .radio-title {
+    margin-bottom: 50px;
+  }
+
+  /* styles/styles.css */
+.albums-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .albums-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .albums-list li {
+    text-align: center;
+    margin: 15px;
+  }
+  
+  .albums-list img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  /* styles/styles.css */
+.tags-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.tag-card {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tag-card a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Media Query for Responsive Layout */
+@media (min-width: 768px) {
+  .tags-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+.bg-custom {
+  background-color: #f5f5dc; /* Specify your desired color code or name */
+}
+
+form button.btn.btn-outline-success {
+  background-color: pink;
+}
+

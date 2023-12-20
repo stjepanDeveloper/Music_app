@@ -1,0 +1,21 @@
+<!-- views/tags.ejs -->
+<%- include('partials/header') %>
+
+<main class="tags-container">
+  <h1 class="title-text">Top Tags</h1>
+
+  <!-- Display Top Tags in Grid Layout -->
+  <section class="tags-grid">
+    <% topTags.forEach(tag => { %>
+      <div class="tag-card">
+        <a href="<%= tag.url %>" target="_blank"><%= tag.name %></a>
+        <p>Reach: <%= tag.reach %></p>
+        <p>Taggings: <%= tag.taggings %></p>
+        <p>Streamable: <%= tag.streamable ? 'Yes' : 'No' %></p>
+        <!-- Add more details as needed -->
+      </div>
+    <% }); %>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
